@@ -1,23 +1,13 @@
 {
-<<<<<<< HEAD
-  "name": "choremeserver",
-  "version": "1.0.0",
-  "description": "ChoreMe server user login and sign up",
-=======
   "name": "choreme-server",
   "version": "1.0.0",
   "description": "Chore application",
->>>>>>> 01e2513d3a7bc80990d006ad63bd15206af5e3e6
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon"
   },
-<<<<<<< HEAD
-  "author": "Ebone Rich",
-  "license": "ISC",
-=======
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darahdesigner/ChoreMe-Server.git"
@@ -28,16 +18,12 @@
     "url": "https://github.com/darahdesigner/ChoreMe-Server/issues"
   },
   "homepage": "https://github.com/darahdesigner/ChoreMe-Server#readme",
->>>>>>> 01e2513d3a7bc80990d006ad63bd15206af5e3e6
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-<<<<<<< HEAD
-=======
     "middleware": "^1.0.0",
->>>>>>> 01e2513d3a7bc80990d006ad63bd15206af5e3e6
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.12.0-alpha.1"
