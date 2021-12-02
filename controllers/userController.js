@@ -1,5 +1,5 @@
 const router = require("express").Router();
-//const { UserModel } = require("../models");
+const { UserModel } = require("../models");
 const { UniqueConstraintError } = require("sequelize/lib/errors");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -68,7 +68,8 @@ router.post("/login", async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({
-            message: "Failed to log in user"
+            message: "Failed to log in user",
+            err: err
         })
     }
 });

@@ -3,7 +3,7 @@ const router = Express.Router();
 const { ChoreModel } = require("../models");
 
 router.post("/create", async (req, res) => {
-  const { description, title, amount, deadline, assign, complete } = req.body.chore;
+  const { title, description, amount, deadline, assign, complete } = req.body.chore;
   const userId = req.user.id;
 
   const newChore = {
@@ -13,7 +13,7 @@ router.post("/create", async (req, res) => {
     deadline: deadline,
     assign: assign,
     complete: complete,
-    // userId: userId
+    userId: userId
   };
   try {
     const post = await ChoreModel.post(newChore);

@@ -15,7 +15,7 @@ const Chore = db.define('chore', {
         allowNull: true,
     },
     deadline: {
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     assign: {
@@ -23,6 +23,10 @@ const Chore = db.define('chore', {
         allowNull: false,
     },
     complete: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    userId: {
         type: DataTypes.STRING,
         allowNull: false,
     }
