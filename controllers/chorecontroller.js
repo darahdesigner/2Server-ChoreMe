@@ -1,45 +1,53 @@
 const Express = require("express");
 const router = Express.Router();
+let validateJWT = require("../middleware/validate-jwt");
 const { ChoreModel } = require("../models");
 
-router.post("/create", async (req, res) => {
-  const { description, title, amount, deadline, assign, complete } = req.body.chore;
-  const userId = req.user.id;
-
-  const newChore = {
-    title: title,
-    description: description,
-    amount: amount,
-    deadline: deadline,
-    assign: assign,
-    complete: complete,
-    // userId: userId
+router.post("/", validateJWT, async (req, res) => {
+  const { title, description, amount, deadline, assign, complete } =
+    req.body.chore;
+  const { id } = req.user;
+  const choreEntry = {
+    title,
+    description,
+    amount,
+    deadline,
+    assign,
+    complete,
+    owner_id: id,
   };
   try {
-    const post = await ChoreModel.post(newChore);
-    res.status(200).json(post);
+    const newChore = await ChoreModel.create(choreEntry);
+    res.status(200).json(newChore);
   } catch (err) {
     res.status(500).json({ error: err });
   }
 });
 
-router.get("/", async (req, res) =>{
+router.get("/", validateJWT, async (req, res) => {
+  const { id } = req.user;
   try {
-    const choreList = await ChoreModel.findAll();
-    res.status(200).json(choreList);
+    const query = {
+      where: {
+        owner_id: id,
+      },
+    };
+    const entries = await ChoreModel.findAll(query);
+    res.status(200).json(entries);
   } catch (err) {
     res.status(500).json({ error: err });
   }
 });
-router.put("/:choreId", async (req, res) => {
-  const { description, title, amount, deadline, assign, complete } =
+
+router.put("/:choreId", validateJWT, async (req, res) => {
+  const { description, title, amount, deadline, assign, complete, owner_id } =
     req.body.chore;
   const choreId = req.params.choreId;
   const userId = req.user.id;
 
   const query = {
     where: {
-      id: userId,
+      id: choreId,
       owner_id: userId,
     },
   };
@@ -54,14 +62,14 @@ router.put("/:choreId", async (req, res) => {
   };
 
   try {
-    const update = await ChoreModel.update(updateChore, query);
+    const update = await ChoreModel.update(updatedChore, query);
     res.status(200).json(update);
   } catch (err) {
     res.status(500).json({ error: err });
   }
 });
 
-router.delete("/:choreId", async (req, res) => {
+router.delete("/:choreId", validateJWT, async (req, res) => {
   const userId = req.user.id;
   const choreId = req.params.choreId;
 
