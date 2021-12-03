@@ -1,0 +1,60 @@
+Project Name: ChoreMe Server [Server for a Chore Application that allows you to create and assign Chores].
+
+Technology Used:
+
+                Postgres: Communicated with database.
+                Express: Handles routing for the server.
+                React: Using React to connect this server to the front-end client side.
+                Node: Manages packages.
+
+Team Member #1  [Will Harris]
+
+              GitHub.com/WilliamBHarris, LinkedIn: none., Portfolio: https://github.com/WilliamBHarris/Portfolio.git
+
+Assigned Tasks
+DELETE endpoint
+Completion Date: 11/27/2021
+[11/27/2021]: chore.js - created the chore model.
+[11/27/2021]: created app.js, db.js to handle server routing.
+[11/27/2021]: chorecontroller.js - created DELETE endpoint.
+
+PUT endpoint
+Completion Date: 11/27/2021
+[11/27/2021]: chorecontroller.js - created the PUT endpoint. - Needs validateJWT.
+
+ 
+
+Team Member #2  [NAME]
+
+              GitHub, LinkedIn, Portfolio links
+
+Assigned Tasks
+Endpoint 1
+Completion Date: WIP / [completion date]
+[date]: [focused items / files] */consider your commit message
+[date]: [focused items / files]
+[date]: [focused items / files]
+Ex: 11/29: Navbar.jsx – build out routing and styling.
+Endpoint 2
+Completion Date: WIP / [completion date]
+[date]: [focused items / files]
+[date]: [focused items / files]
+*additional / optional
+ 
+
+Team Member #3  [NAME]
+
+              GitHub, LinkedIn, and Portfolio links
+
+Assigned Tasks
+Endpoint 1
+Completion Date: WIP / [completion date]
+[date]: [focused items / files] */consider your commit message
+[date]: [focused items / files]
+[date]: [focused items / files]
+Ex: 11/29: Navbar.jsx – build out routing and styling.
+Endpoint 2
+Completion Date: WIP / [completion date]
+[date]: [focused items / files]
+[date]: [focused items / files]
+*additional / optional

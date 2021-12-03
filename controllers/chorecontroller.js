@@ -4,7 +4,7 @@ let validateJWT = require("../middleware/validate-jwt");
 const { ChoreModel } = require("../models");
 
 router.post("/", validateJWT, async (req, res) => {
-  const { title, description, amount, deadline, assign, complete, owner_id } =
+  const { title, description, amount, deadline, assign, complete } =
     req.body.chore;
   const { id } = req.user;
   const choreEntry = {
@@ -24,6 +24,21 @@ router.post("/", validateJWT, async (req, res) => {
   }
 });
 
+router.get("/", validateJWT, async (req, res) => {
+  const { id } = req.user;
+  try {
+    const query = {
+      where: {
+        owner_id: id,
+      },
+    };
+    const entries = await ChoreModel.findAll(query);
+    res.status(200).json(entries);
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+});
+
 router.put("/:choreId", validateJWT, async (req, res) => {
   const { description, title, amount, deadline, assign, complete, owner_id } =
     req.body.chore;
@@ -32,23 +47,22 @@ router.put("/:choreId", validateJWT, async (req, res) => {
 
   const query = {
     where: {
-      id: userId,
+      id: choreId,
       owner_id: userId,
     },
   };
 
   const updatedChore = {
-    title,
-    description,
-    amount,
-    deadline,
-    assign,
-    complete,
-    owner_id,
+    title: title,
+    description: description,
+    amount: amount,
+    deadline: deadline,
+    assign: assign,
+    complete: complete,
   };
 
   try {
-    const update = await ChoreModel.update(updateChore, query);
+    const update = await ChoreModel.update(updatedChore, query);
     res.status(200).json(update);
   } catch (err) {
     res.status(500).json({ error: err });
