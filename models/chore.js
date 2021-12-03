@@ -15,7 +15,7 @@ const ChoreModel = db.define("chore", {
     allowNull: false,
   },
   deadline: {
-    type: DataTypes.STRING,
+    type: DataTypes.DATE,
   },
   assign: {
     type: DataTypes.STRING,
