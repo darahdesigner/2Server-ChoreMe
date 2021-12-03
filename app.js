@@ -15,7 +15,7 @@ dbConnection
   .then(() => dbConnection.sync())
   .then(() => {
     app.listen(process.env.PORT, () => {
-      console.log(`[Server]: App is listening on 3000.`);
+      console.log(`[Server]: App is listening.`);
     });
   })
   .catch((err) => {
