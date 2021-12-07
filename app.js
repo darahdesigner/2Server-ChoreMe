@@ -1,25 +1,23 @@
-const Express = require ("express");
-const app = Express();
-const dbConnection = require("./db");
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const dbConnection = require('./db')
 
-//app.use(require('./middleware/headers'));
+const controllers = require("./controllers");
 
-const controllers =require("./controllers");
- app.use(Express.json());
- app.use("/user", controllers.userController);
- app.use("/chore", controllers.choreController);
-//app.use(require("./middleware/validate-jwt"));
-//app.use("/journal", controllers.journalController);
+app.use(express.json())
+app.use(require("./middleware/headers"));
+app.use("/chore", controllers.choreController);
+app.use('/user', controllers.userController)
 
- dbConnection.authenticate()
- .then(() => dbConnection.sync())
- .then(() => {
-    app.listen(3000, () => {
-        console.log(`[Server]: App is listening on 3000.`);
+dbConnection
+  .authenticate()
+  .then(() => dbConnection.sync())
+  .then(() => {
+    app.listen(process.env.PORT, () => {
+      console.log(`[Server]: App is listening.`);
     });
- })
- .catch((err) => {
-     console.log(`[Server]: Server crashed. Error = ${err}`);
- });
-
- //hello again
+  })
+  .catch((err) => {
+    console.log(`[Server]: Server crashed. Error = ${err}`);
+  });

@@ -1,8 +1,4 @@
+const ChoreModel = require("./chore");
 const UserModel = require("./user");
-const ChoreModel = require('./chore')
 
-
-module.exports = { 
-    UserModel,
-    ChoreModel
- };
+module.exports = { ChoreModel, UserModel };
