@@ -11,8 +11,6 @@ const controllers =require("./controllers");
 //app.use(require("./middleware/validate-jwt"));
 //app.use("/journal", controllers.journalController);
 
-//^^I think we need to check encryption/ validation for choreMe users (Line 5, line 11)- DS
-
  dbConnection.authenticate()
  .then(() => dbConnection.sync())
  .then(() => {
