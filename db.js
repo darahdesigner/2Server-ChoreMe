@@ -1,9 +1,14 @@
 const Sequelize = require('sequelize');
 
-const db = new Sequelize(process.env.DATABASE_URL,{
-   Sequelize = new Sequelize(`postgres://localhost:${PORT}/Chore-Me`)
-}
-)
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect: 'postgres',
+    // dialectOptions: {
+    //     ssl: {
+    //         require: true,
+    //         rejectUnauthorized: false
+    //     }
+    // }
+})
 
 // ^^ local    V V heroku
 
