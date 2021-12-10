@@ -16,9 +16,12 @@ dbConnection
   .authenticate()
   .then(() => dbConnection.sync())
   .then(() => {
+    app.listen(process.env.PORT, () => {
       console.log(`[Server]: App is listening ${process.env.PORT}`);
     });
-  })
+
+    })
+  
   .catch((err) => {
     console.log(`[Server]: Server crashed. Error = ${err}`);
   });
