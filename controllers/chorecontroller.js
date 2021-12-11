@@ -87,4 +87,18 @@ router.delete("/:choreId", validateJWT, async (req, res) => {
   }
 });
 
+router.get("/:assign", async (req, res) => {
+  
+  const { assign } = req.params;
+  try {
+    const results = await ChoreModel.findAll({
+      where: { assign: assign,
+        },
+    });
+    res.status(200).json(results);
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+});
+
 module.exports = router;

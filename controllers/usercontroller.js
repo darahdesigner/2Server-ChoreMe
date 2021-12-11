@@ -76,12 +76,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// router.post('/token', validateJWT, async (req, res) => {
-//   response.status(200).json({
-//       message: 'Valid Token.',
-//       user_id: request.user_id,
-//       username: request.username
-//   });
-// });
-
 module.exports = router;
