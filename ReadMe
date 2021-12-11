@@ -22,6 +22,11 @@ PUT endpoint
 Completion Date: 11/27/2021
 [11/27/2021]: chorecontroller.js - created the PUT endpoint. - Needs validateJWT.
 
+Added :assign endpoint
+Completion Date: 12/11/2021
+[12/11/2021] : Added the search by assign value endpoint in the usercontroller.js
+               Also, changed Amount datatype in UserModel to specify INTEGER.
+
  
 
 Team Member #2  [NAME]
