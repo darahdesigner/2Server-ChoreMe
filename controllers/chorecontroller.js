@@ -88,7 +88,6 @@ router.delete("/:choreId", validateJWT, async (req, res) => {
 });
 
 router.get("/:assign", async (req, res) => {
-  
   const { assign } = req.params;
   try {
     const results = await ChoreModel.findAll({
@@ -96,6 +95,20 @@ router.get("/:assign", async (req, res) => {
         },
     });
     res.status(200).json(results);
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+});
+
+router.get("/mine/:owner_id", validateJWT, async (req, res) => {
+  const { id } = req.user;
+  try {
+    const userChores = await ChoreModel.findAll({
+      where: {
+        owner_id: id,
+      },
+    });
+    res.status(200).json(userChores);
   } catch (err) {
     res.status(500).json({ error: err });
   }
