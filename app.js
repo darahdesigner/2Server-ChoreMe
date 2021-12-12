@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const dbConnection = require('./db')
-
 const controllers = require("./controllers");
 
 
@@ -19,7 +18,9 @@ dbConnection
     app.listen(process.env.PORT, () => {
       console.log(`[Server]: App is listening ${process.env.PORT}`);
     });
-  })
+
+    })
+  
   .catch((err) => {
     console.log(`[Server]: Server crashed. Error = ${err}`);
   });

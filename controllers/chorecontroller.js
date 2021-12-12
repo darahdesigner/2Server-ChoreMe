@@ -4,7 +4,7 @@ let validateJWT = require("../middleware/validate-jwt");
 const { ChoreModel } = require("../models");
 
 router.post("/", validateJWT, async (req, res) => {
-  const { title, description, amount, deadline, assign, complete } =
+  const { title, description, amount, deadline, assign, complete, owner_id } =
     req.body.chore;
   const { id } = req.user;
   const choreEntry = {
