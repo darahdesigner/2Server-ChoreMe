@@ -22,6 +22,12 @@ PUT endpoint
 Completion Date: 11/27/2021
 [11/27/2021]: chorecontroller.js - created the PUT endpoint. - Needs validateJWT.
 
+Search by name:
+[12/11/2021]: chorecontroller.js - Added search by name endpoint.  Changed Amount Datatype to Integer.
+
+Get all my posts:
+[12/12/2021] : chorecontroller.js - Added get mine endpoint.
+
  
 
 Team Member #2  [NAME]
