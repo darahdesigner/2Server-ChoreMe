@@ -24,22 +24,23 @@ Completion Date: 11/27/2021
 
  
 
-Team Member #2  [NAME]
+Team Member #2  [Ebone Rich]
 
               GitHub, LinkedIn, Portfolio links
 
 Assigned Tasks
-Endpoint 1
+Endpoint 1 User Sign up
+Completion Date: WIP / [11/30]
+[11/28]: Created server skeleton
+[11/29]: created user controller
+[11/30]: completed user controller
+
+Endpoint 2 User Login 
 Completion Date: WIP / [completion date]
-[date]: [focused items / files] */consider your commit message
-[date]: [focused items / files]
-[date]: [focused items / files]
-Ex: 11/29: Navbar.jsx – build out routing and styling.
-Endpoint 2
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
-*additional / optional
+[12/01]: created user model
+[12/01]: completed middleware folders for sign up login
+[12/02]: tested end points in post man to ensure connect to PG admin and postman received Get requests
+
  
 
 Team Member #3  [NAME]
