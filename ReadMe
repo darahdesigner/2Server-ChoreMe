@@ -21,9 +21,9 @@ Completion Date: 11/27/2021
 Search by name:
 [11/27/2021]: chorecontroller.js - created the PUT endpoint. - Needs validateJWT.
 
-Added :assign endpoint
-Completion Date: 12/11/2021
-[12/11/2021]: Added the search by name endpoint.Also, changed Amount Datatype to Integer.
+Search by name:
+[12/11/2021]: chorecontroller.js - Added search by name endpoint.  Changed Amount Datatype to Integer.
+
 
 Get all my posts:
 [12/12/2021] : chorecontroller.js - Added get mine endpoint.
@@ -63,6 +63,7 @@ Team Member #3  [Ebone Rich]
  https://ebone-rich.github.io/EboneRichPortfolio/
 
 Assigned Tasks
+
 User POST (Register)
 Completion Date: [12/1/21]
 [11/27/21]: [Created Register Endpoint]
@@ -72,4 +73,3 @@ User POST (login)
 Completion Date: [12/1/21]
 [11/27/21]: [Created Register Endpoint]
 [12/1/21]: [Login Endpoint pushed to new github repo]
-
