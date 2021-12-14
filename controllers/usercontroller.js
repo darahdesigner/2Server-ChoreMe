@@ -8,9 +8,6 @@ const validateJWT = require("../middleware/validate-jwt");
 
 
 
-// A comment
-
-
 router.post("/register", async (req, res) => {
   let { username, passwordhash } = req.body.user;
 
@@ -38,13 +35,8 @@ router.post("/register", async (req, res) => {
         message: "Failed to register the User!",
       });
     }
-
-  });
-  
-=======
   }
 });
-
 
 router.post("/login", async (req, res) => {
 
@@ -83,5 +75,13 @@ router.post("/login", async (req, res) => {
     });
   }
 });
+
+// router.post('/token', validateJWT, async (req, res) => {
+//   response.status(200).json({
+//       message: 'Valid Token.',
+//       user_id: request.user_id,
+//       username: request.username
+//   });
+// });
 
 module.exports = router;

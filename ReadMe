@@ -18,14 +18,15 @@ Completion Date: 11/27/2021
 [11/27/2021]: created app.js, db.js to handle server routing.
 [11/27/2021]: chorecontroller.js - created DELETE endpoint.
 
-PUT endpoint
-Completion Date: 11/27/2021
+Search by name:
 [11/27/2021]: chorecontroller.js - created the PUT endpoint. - Needs validateJWT.
 
 Added :assign endpoint
 Completion Date: 12/11/2021
-[12/11/2021] : Added the search by assign value endpoint in the usercontroller.js
-               Also, changed Amount datatype in UserModel to specify INTEGER.
+[12/11/2021]: Added the search by name endpoint.Also, changed Amount Datatype to Integer.
+
+Get all my posts:
+[12/12/2021] : chorecontroller.js - Added get mine endpoint.
 
  
 =====================
