@@ -26,7 +26,7 @@ Completion Date: 11/27/2021
 
 Team Member #2  [Ebone Rich]
 
-              GitHub, LinkedIn, Portfolio links
+              Profile: https://github.com/ebone-rich, LinkedIn:https://www.linkedin.com/in/ebone-rich/ Portfolio links: https://github.com/ebone-rich/EboneRichPortfolio
 
 Assigned Tasks
 Endpoint 1 User Sign up
@@ -40,6 +40,7 @@ Completion Date: WIP / [completion date]
 [12/01]: created user model
 [12/01]: completed middleware folders for sign up login
 [12/02]: tested end points in post man to ensure connect to PG admin and postman received Get requests
+[12/14]: working server no errors
 
  
 
