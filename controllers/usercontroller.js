@@ -4,7 +4,6 @@ const { UserModel } = require("../models");
 const { UniqueConstraintError } = require("sequelize/lib/errors");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const validateJWT = require("../middleware/validate-jwt");
 
 
 
