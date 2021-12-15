@@ -10,17 +10,6 @@ const sequelize = new Sequelize(process.env.DATABASE_URL,
 // ^^ for local   VVV for heroku
 {
     dialect: 'postgres',
-<<<<<<< HEAD
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false,
-        }
-    }
-}
-)
-console.log(process.env.HOST);
-=======
     // dialectOptions: {
     //     ssl: {
     //         require: true,
@@ -28,7 +17,6 @@ console.log(process.env.HOST);
     //     }
     // }
 })
->>>>>>> 5914f431649e85af57c2ce9ed35c8a1ac459b73b
 
 // ^^ local    V V heroku
 
