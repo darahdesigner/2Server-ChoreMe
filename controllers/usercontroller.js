@@ -46,8 +46,8 @@ router.post("/login", async (req, res) => {
 
         if (loginUser) {
       let passwordComparison = await bcrypt.compare(
-        passwordhash,
-        loginUser.passwordhash
+        password,
+        loginUser.password
       );
 
             if (passwordComparison) {
