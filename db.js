@@ -1,19 +1,20 @@
-const Sequelize = require('sequelize');
+const { Sequelize } = require('sequelize/dist');
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
+const sequelize = new Sequelize(process.env.DATABASE_URL, 
+    process.env.HOST =="local" ?
+    {
     dialect: 'postgres',
-})
-
-
-// if (process.env.DATABASE_URL) {
-// //the application is executed on heroku... use the postgres database
-// sequelize = new Sequelize(pross.env.DATABASE_URL, {
-//     dialect: 'postgres',
-//     protocol: 'postgres',
-//     logging: true //false
-// });
-// } else {
-//     //the appplication is executed on the local machine
-//     sequelize = new Sequelize("postgres://localhost:5432/Chore-Me");
-// }
-module.exports = sequelize;
+    }
+   :
+   {
+        dialect: 'postgres',
+        dialectOptions: {
+          ssl: {
+            require: true,
+            rejectUnauthorized: false
+          }
+        }
+      }
+  )
+  
+  module.exports = sequelize;
