@@ -43,11 +43,21 @@ router.post("/login", async (req, res) => {
         });
 
         if (loginUser) {
+<<<<<<< HEAD
 
             let passwordComparison = await bcrypt.compare(password, loginUser.password);
 
             if (passwordComparison) {
 
+=======
+      let passwordComparison = await bcrypt.compare(
+        passwordhash,
+        loginUser.passwordhash
+      );
+
+            if (passwordComparison) {
+
+>>>>>>> fe613d2df4e2da5cdcc16a8c2052c024d6fafb83
                 let token = jwt.sign({ id: loginUser.id }, process.env.JWT_SECRET, { expiresIn: 60 * 60 * 24 });
 
                 res.status(200).json({

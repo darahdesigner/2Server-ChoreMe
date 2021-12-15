@@ -18,43 +18,58 @@ Completion Date: 11/27/2021
 [11/27/2021]: created app.js, db.js to handle server routing.
 [11/27/2021]: chorecontroller.js - created DELETE endpoint.
 
-PUT endpoint
-Completion Date: 11/27/2021
+Search by name:
 [11/27/2021]: chorecontroller.js - created the PUT endpoint. - Needs validateJWT.
 
+Search by name:
+[12/11/2021]: chorecontroller.js - Added search by name endpoint.  Changed Amount Datatype to Integer.
+
+
+Get all my posts:
+[12/12/2021] : chorecontroller.js - Added get mine endpoint.
+
  
+=====================
+Team Member #2  [Darah Snider]
 
-Team Member #2  [NAME]
+https://github.com/darahdesigner/
+https://www.linkedin.com/in/darahsnider/
+https://darahdesigner.github.io/DarahPortfolio/ [Web Dev Portfolio, I built it in HTML5 and CSS3, using Bootstrap]
+https://darahsnider.myportfolio.com/ [UX/UI, Graphic Design, and Illustration Portfolio, built with Adobe Portfolio]
 
-              GitHub, LinkedIn, Portfolio links
 
 Assigned Tasks
-Endpoint 1
-Completion Date: WIP / [completion date]
-[date]: [focused items / files] */consider your commit message
-[date]: [focused items / files]
-[date]: [focused items / files]
-Ex: 11/29: Navbar.jsx – build out routing and styling.
-Endpoint 2
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
-*additional / optional
+Endpoint 1 - Create Chore
+Completion Date:[11/29/21]
+[11/29/21]: [Completed endpoint, pushed to github repo that broke later] 
+
+Endpoint 2 - Get Chores
+Completion Date: [11/29/21]
+[11/29/21]: [Completed endpoint, pushed to github repo that broke later]
+
+Task - Github repos
+11/24/2021 and ongoing
+
+Task - Heroku deployment server completed 12/7/21
+Task - Landing page Hifi mockup completed 12/8/21
+Task - Heroku deployment client completed 12/9/21
  
+=====================
 
-Team Member #3  [NAME]
+Team Member #3  [Ebone Rich]
 
-              GitHub, LinkedIn, and Portfolio links
+ https://github.com/ebone-rich 
+ https://www.linkedin.com/in/ebone-rich/ 
+ https://ebone-rich.github.io/EboneRichPortfolio/
 
 Assigned Tasks
-Endpoint 1
-Completion Date: WIP / [completion date]
-[date]: [focused items / files] */consider your commit message
-[date]: [focused items / files]
-[date]: [focused items / files]
-Ex: 11/29: Navbar.jsx – build out routing and styling.
-Endpoint 2
-Completion Date: WIP / [completion date]
-[date]: [focused items / files]
-[date]: [focused items / files]
-*additional / optional
+
+User POST (Register)
+Completion Date: [12/1/21]
+[11/27/21]: [Created Register Endpoint]
+[12/1/21]: [Register Endpoint pushed to new github repo]
+
+User POST (login)
+Completion Date: [12/1/21]
+[11/27/21]: [Created Register Endpoint]
+[12/1/21]: [Login Endpoint pushed to new github repo]
