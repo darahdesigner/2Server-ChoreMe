@@ -38,3 +38,6 @@ const sequelize = new Sequelize(process.env.DATABASE_URL,
 // package.json again
 // in dependencies {}
 // "middleware": "^1.0.0",
+
+// Gabrielle had this in dev dependencies
+// "nodemon": "^1.19.4"
