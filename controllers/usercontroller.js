@@ -4,6 +4,8 @@ const { UniqueConstraintError } = require("sequelize/lib/errors");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
+
+
 router.post("/register", async (req, res) => {
     let { email, password } = req.body.user;
     try {
@@ -44,8 +46,8 @@ router.post("/login", async (req, res) => {
 
         if (loginUser) {
       let passwordComparison = await bcrypt.compare(
-        password,
-        loginUser.password
+        passwordhash,
+        loginUser.passwordhash
       );
 
             if (passwordComparison) {
