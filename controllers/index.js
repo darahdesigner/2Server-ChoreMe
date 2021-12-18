@@ -1,4 +1,4 @@
 module.exports = {
     choreController: require('./chorecontroller'),
-    userController: require('./usercontroller')
+    userController: require('./userController')
 }
